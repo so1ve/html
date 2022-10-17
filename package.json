@@ -1,5 +1,5 @@
 {
-  "name": "@leafac/html",
+  "name": "@so1ve/leafac-html",
   "version": "3.0.3",
   "description": "Radically Straightforward HTML",
   "keywords": [
@@ -8,9 +8,9 @@
     "tagged template literal",
     "template strings"
   ],
-  "homepage": "https://github.com/leafac/html",
-  "repository": "https://github.com/leafac/html",
-  "bugs": "https://github.com/leafac/html/issues",
+  "homepage": "https://github.com/so1ve/html",
+  "repository": "https://github.com/so1ve/html",
+  "bugs": "https://github.com/so1ve/html/issues",
   "funding": [
     "https://patreon.com/leafac",
     "https://paypal.me/LeandroFacchinettiEU",

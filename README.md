@@ -3,30 +3,30 @@
 - I tested this against `ReactDOMServer.renderToStaticMarkup()` and it’s twice as fast!
 
 
-@leafac/html: 1199ms
+@so1ve/html: 1199ms
 React: 2487ms
 
-import { html } from "@leafac/html";
+import { html } from "@so1ve/html";
 import React from "react";
 import ReactDOMServer from "react-dom/server.js";
 
 let before;
 const iterations = 1_000_000;
 
-const leafac_HTML = () =>
+const so1ve_HTML = () =>
   html`
-    <a href="${`https://leafac.com`}">
+    <a href="${`https://so1ve.com`}">
       $${html`<strong>${"Hello World"}</strong>`}
     </a>
   `;
-console.log(leafac_HTML());
+console.log(so1ve_HTML());
 before = Date.now();
-for (let i = 0; i < iterations; i++) leafac_HTML();
-console.log(`@leafac/html: ${Date.now() - before}ms`);
+for (let i = 0; i < iterations; i++) so1ve_HTML();
+console.log(`@so1ve/html: ${Date.now() - before}ms`);
 
 const react = () =>
   ReactDOMServer.renderToStaticMarkup(
-    <a href={`https://leafac.com`}>{<strong>{"Hello World"}</strong>}</a>
+    <a href={`https://so1ve.com`}>{<strong>{"Hello World"}</strong>}</a>
   );
 console.log(react());
 before = Date.now();
@@ -36,12 +36,12 @@ console.log(`React: ${Date.now() - before}ms`);
 
 -->
 
-<h1 align="center">@leafac/html</h1>
+<h1 align="center">@so1ve/html</h1>
 <h3 align="center">HTML <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">tagged template literals</a></h3>
 <p align="center">
-<a href="https://github.com/leafac/html"><img src="https://img.shields.io/badge/Source---" alt="Source"></a>
-<a href="https://www.npmjs.com/package/@leafac/html"><img alt="Package" src="https://badge.fury.io/js/%40leafac%2Fhtml.svg"></a>
-<a href="https://github.com/leafac/html/actions"><img src="https://github.com/leafac/html/workflows/.github/workflows/main.yml/badge.svg" alt="Continuous Integration"></a>
+<a href="https://github.com/so1ve/html"><img src="https://img.shields.io/badge/Source---" alt="Source"></a>
+<a href="https://www.npmjs.com/package/@so1ve/html"><img alt="Package" src="https://badge.fury.io/js/%so1ve%2Fhtml.svg"></a>
+<a href="https://github.com/so1ve/html/actions"><img src="https://github.com/so1ve/html/workflows/.github/workflows/main.yml/badge.svg" alt="Continuous Integration"></a>
 </p>
 
 ### Videos
@@ -53,17 +53,17 @@ console.log(`React: ${Date.now() - before}ms`);
 ### Installation
 
 ```console
-$ npm install @leafac/html
+$ npm install @so1ve/html
 ```
 
-Use @leafac/html with [Prettier](https://prettier.io) (automatic formatting), and the Visual Studio Code extensions [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (Prettier support) and [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) (syntax highlighting).
+Use @so1ve/html with [Prettier](https://prettier.io) (automatic formatting), and the Visual Studio Code extensions [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (Prettier support) and [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) (syntax highlighting).
 
 ### Features, Usage, and Examples
 
 - **Use tagged template literals as an HTML template engine.** For example:
 
   ```typescript
-  import html from "@leafac/html";
+  import html from "@so1ve/html";
 
   console.log(html`<p>${"Leandro Facchinetti"}</p>`); // => <p>Leandro Facchinetti</p>
   ```
@@ -88,11 +88,11 @@ Use @leafac/html with [Prettier](https://prettier.io) (automatic formatting), an
 
   Array interpolations are safe by default; if you wish to unsafely interpolate an array of trusted HTML use `$${[...]}`.
 
-- **@leafac/html doesn’t encode HTML itself.** It relies on [he](https://npm.im/he), which is much more robust than any bespoke encoding.
+- **@so1ve/html doesn’t encode HTML itself.** It relies on [he](https://npm.im/he), which is much more robust than any bespoke encoding.
 
-- **@leafac/html doesn’t try to format the output.** If you need pretty HTML, you may call Prettier programmatically on the output.
+- **@so1ve/html doesn’t try to format the output.** If you need pretty HTML, you may call Prettier programmatically on the output.
 
-- **@leafac/html generates strings.** No kind of virtual DOM here. For readability, the `HTML` type is exported in TypeScript, and you may use it like in the following example:
+- **@so1ve/html generates strings.** No kind of virtual DOM here. For readability, the `HTML` type is exported in TypeScript, and you may use it like in the following example:
 
   ```typescript
   import { html, HTML } from ".";
@@ -100,7 +100,7 @@ Use @leafac/html with [Prettier](https://prettier.io) (automatic formatting), an
   console.log(name);
   ```
 
-- **@leafac/html sanitizes (removes) invalid XML characters.** It uses [sanitize-xml-string](https://npm.im/sanitize-xml-string). For example:
+- **@so1ve/html sanitizes (removes) invalid XML characters.** It uses [sanitize-xml-string](https://npm.im/sanitize-xml-string). For example:
 
   <!-- prettier-ignore -->
   ```typescript
@@ -109,8 +109,8 @@ Use @leafac/html with [Prettier](https://prettier.io) (automatic formatting), an
 
 ### Related Projects
 
-- <https://npm.im/@leafac/sqlite>: [better-sqlite3](https://npm.im/better-sqlite3) with tagged template literals.
-- <https://npm.im/@leafac/sqlite-migration>: A lightweight migration system for @leafac/sqlite.
+- <https://npm.im/@so1ve/sqlite>: [better-sqlite3](https://npm.im/better-sqlite3) with tagged template literals.
+- <https://npm.im/@so1ve/sqlite-migration>: A lightweight migration system for @so1ve/sqlite.
 
 ### Prior Art
 
